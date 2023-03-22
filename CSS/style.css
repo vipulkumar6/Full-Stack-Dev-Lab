@@ -1,0 +1,88 @@
+.newsWrap .links {
+    height: 50px;
+    /* border: 1px solid; */
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 70px 0;
+}
+
+.newsWrap h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.links a {
+    text-decoration: none;
+    font-size: 19px;
+    margin: 10px;
+    text-transform: uppercase;
+}
+
+.news {
+    padding: ;
+    height: 350px;
+    width: 300px;
+    /* border: 1px solid; */
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    margin: 10px;
+}
+
+.news .texts {
+    padding: 10px;
+}
+
+.newsContainer {
+    /* border: 1px sienna solid; */
+    display: flex;
+    justify-content: space-around;
+}
+
+.newsContainer .newsLeft {
+    display: flex;
+    margin: 10px;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.newsright div {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.newsright div a {
+    text-decoration: none;
+    font-size: 20px;
+    margin: 10px;
+}
+
+.newsContainer .newsLeft #nws {
+    display: flex;
+
+}
+
+.searchBox input {
+    border: none;
+    outline: none;
+    margin-right: 10px;
+    border: 1px solid;
+    border-radius: 4px;
+    width: 400px;
+    padding: 10px;
+}
+
+.searchBox {
+    display: flex;
+    height: 50px;
+    /* border: 1px solid; */
+    justify-content: center;
+
+}
+
+.searchBox i {
+    font-size: 20px;
+    cursor: pointer;
+}
