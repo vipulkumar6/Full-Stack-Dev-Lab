@@ -5,22 +5,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Frames</title>
     <style>
         .outer {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            margin: 30px 0;
+        }
+        .info{
+            text-align: center;
+            border: 1px solid;
+        }
+        .topHead{
+            /* width: 100%; */
+            text-align: center;
+            border: 1px solid;
+            
         }
     </style>
 </head>
 
 <body>
     <div class="outer">
-        <h1>Vipul Kumar</h1>
-
+       
         <div class="inner">
+            <div class="topHead">
+                <h3>Vipul Kumar</h3>
+                <p>know more about me</p>
+            </div>
+
             <iframe style="border: 1px solid black " width="200" height="300" name="first" src="./First.html"
                 frameborder="0">
 
@@ -32,10 +47,13 @@
 
             <iframe name="third" style="border: 1px solid black" width="200" height="300" src="./third.html"
                 frameborder="0"></iframe>
+                <p class="info">vipulchauhan1123@gmail.com</p>
         </div>
-        <h4>vipulkumar@gmail.com</h4>
+       
 
     </div>
+    <hr>
+    <h4 style="text-align: center;">Name : Vipul Kumar, Roll NO : 61 (2018856)</h4>
 </body>
 
 </html>
