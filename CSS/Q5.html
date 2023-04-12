@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transition Effect</title>
+    <style>
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30vh;
+
+        display: flex;
+        flex-direction: column;
+      }
+      h4 {
+        text-align: center;
+      }
+      div h1 {
+        animation: changeStyle 4s infinite;
+        transition: all 0.3s ease-in-out;
+      }
+      @keyframes changeStyle {
+        0% {
+          font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        }
+        25% {
+          font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+        50% {
+          font-family: "Times New Roman", Times, serif;
+        }
+        75% {
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        /* 100% {
+          font-family: "Franklin Gothic Medium", "Arial Narrow", Arial,
+            sans-serif;
+        } */
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Hello CSS, This is Transition Effect.</h1>
+    </div>
+    <hr />
+    <h4>Vipul Kumar 61 2018856</h4>
+  </body>
+</html>

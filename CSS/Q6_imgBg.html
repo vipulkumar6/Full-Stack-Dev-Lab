@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Background</title>
+    <style>
+      .imageBox {
+        background: url(./html.avif);
+        height: 100vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-attachment: fixed;
+        flex-direction: column;
+      }
+      h1 {
+        color: #fff;
+      }
+      .imageBox div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* color: #eee; */
+      }
+
+      .wrap img {
+        border-radius: 50%;
+        height: 300px;
+        width: 300px;
+        margin: 40px 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="imageBox">
+        <h1>Hello BackGroud image</h1>
+        <div>
+          <img src="./vipul.jpg" alt="" />
+          <div
+            style="background-color: #eee; padding: 10px; border-radius: 7px"
+          >
+            <h2>Vipul Kumar</h2>
+            <h4>Web Developer</h4>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2>Top Programing langauge</h2>
+        <p>
+          Python, PHP, Go, and Ruby help databases communicate with applications
+          at the back-end of a program. Web application development. C#,
+          JavaScript, Java, Go, and Ruby are among the best programming
+          languages for building web apps
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
+          voluptatibus ullam veritatis nisi deserunt. Alias quam reiciendis
+          doloribus minus incidunt adipisci ipsum consectetur reprehenderit,
+          harum, perferendis architecto, esse quae? Illum, totam debitis!
+          Temporibus, explicabo?
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
