@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+      }
+      h3 {
+        border-bottom: 1px solid;
+        text-align: center;
+      }
+      form div {
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border: 1px solid;
+        padding: 30px;
+      }
+      form div input {
+        padding: 10px;
+        margin: 10px 0;
+      }
+      button {
+        padding: 13px 16px;
+        margin: 10px;
+        cursor: pointer;
+        border-radius: 6px;
+        outline: none;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <div>
+        <input required type="text" id="name" placeholder="Enter Your Name" />
+        <input
+          required
+          type="password"
+          name=""
+          id="password"
+          placeholder="Enter Password"
+        />
+        <input
+          required
+          type="email"
+          name=""
+          id="email"
+          placeholder="Enter Email"
+        />
+        <button type="button" onclick="SubmitEvent()">Submit</button>
+        <!-- <hr /> -->
+        <h3>Status</h3>
+
+        <p id="nameResult"></p>
+
+        <p id="passResult"></p>
+
+        <p id="emailResult"></p>
+      </div>
+    </form>
+
+    <script>
+      function SubmitEvent() {
+        var pattern = /^[A-Za-z ]+$/;
+        var emailReg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+        var nameValue = document.getElementById("name").value;
+        var passValue = document.getElementById("password").value;
+        var emailValue = document.getElementById("email").value;
+
+        if (nameValue.length >= 6) {
+          if (nameValue.match(pattern)) {
+            document.getElementById("nameResult").innerHTML = "Valid Name";
+          } else
+            document.getElementById("nameResult").innerHTML = "InValid Name";
+        } else {
+          document.getElementById("nameResult").innerHTML = "InValid Name";
+        }
+
+        if (passValue >= 6)
+          document.getElementById("passResult").innerHTML = "Valid Password";
+        else
+          document.getElementById("passResult").innerHTML = "InValid Password";
+
+        if (emailValue.match(emailReg))
+          document.getElementById("emailResult").innerHTML = "Valid Email";
+        else document.getElementById("emailResult").innerHTML = "InValid Email";
+      }
+    </script>
+  </body>
+</html>
