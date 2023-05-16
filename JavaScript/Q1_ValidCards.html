@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valid Card</title>
+    <style>
+      form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+      }
+      .cardForm {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border: 1px solid;
+        width: 400px;
+        height: 300px;
+      }
+      .Cardtype {
+        margin: 10px;
+      }
+      input {
+        padding: 10px;
+      }
+      form {
+      }
+      button {
+        padding: 13px 16px;
+        margin: 10px;
+        cursor: pointer;
+        border-radius: 6px;
+        outline: none;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <div class="cardForm">
+        <div class="Cardtype">
+          <input
+            type="radio"
+            value="master-card"
+            id="master-card"
+            name="type"
+          />
+          Master Card
+          <input type="radio" value="visa" id="visa" name="type" />
+          Visa
+          <input
+            type="radio"
+            value="american-exp"
+            id="american-exp"
+            name="type"
+          />
+          American Express
+        </div>
+        <div>
+          <input
+            type="text"
+            name=""
+            placeholder="Enter Card Number"
+            id="cardNumber"
+          />
+        </div>
+
+        <button type="button" onclick="display()">Submit</button>
+      </div>
+    </form>
+
+    <script>
+      function display() {
+        var cardNumber = document
+          .getElementById("cardNumber")
+          .value.replaceAll(" ", "") // to remove white space from mid
+          .trim(); // to remove white space from start and end
+        if (document.getElementById("master-card").checked) {
+          if (
+            cardNumber.startsWith("50") ||
+            cardNumber.startsWith("51") ||
+            cardNumber.startsWith("52") ||
+            cardNumber.startsWith("53") ||
+            cardNumber.startsWith("54") ||
+            cardNumber.startsWith("55")
+          ) {
+            if (cardNumber.length == 16) {
+              alert("Valid Master Card");
+            } else alert("InValid Master Card");
+          } else alert("INValid Master Card");
+        } else if (document.getElementById("visa").checked) {
+          if (cardNumber.startsWith("4")) {
+            if (cardNumber.length == 16 || cardNumber.length == 13) {
+              alert("Valid Visa Card");
+            } else alert("InValid Visa Card");
+          } else alert("INValid Visa Card");
+        }
+        if (document.getElementById("american-exp").checked) {
+          if (cardNumber.startsWith("34") || cardNumber.startsWith("37")) {
+            if (cardNumber.length == 15) {
+              alert("Valid American Express Card");
+            } else alert("InValid American Express Card");
+          } else alert("INValid American Express Card");
+        }
+      }
+    </script>
+  </body>
+</html>
