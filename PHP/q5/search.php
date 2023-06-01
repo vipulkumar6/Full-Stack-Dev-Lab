@@ -31,7 +31,7 @@ border: 1px solid;
 <body>
     <form action="" method="POST">
         <div>
-            <input type="text" name="search" id="" placeholder="Enter Tile of the book *">
+            <input type="text" name="search" id="" placeholder="Enter Acc Number *">
              <input class="button" type="submit" name="searchBTN" value="Search" />
                
         </div>
@@ -49,7 +49,7 @@ include 'server.php';
 if(isset($_POST['searchBTN']))
 {
     $title=$_POST['search'];
-    $select= "SELECT * from book1 WHERE title='$title'";
+    $select= "SELECT * from book1 WHERE acc_num='$title'";
     $res=mysqli_query($conn,$select);
    echo $title;
     if($res)

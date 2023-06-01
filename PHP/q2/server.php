@@ -3,7 +3,7 @@
 $username="root";
 $password="";
 $server="localhost";
-$db="bookinfo";
+$db="depart";
 
 
 $conn= mysqli_connect($server,$username,$password,$db);
@@ -17,6 +17,4 @@ else
     echo "NO COnnection !";
     die("Connectio  failed".mysqli_connect_error());
 }
-
-
 ?>
