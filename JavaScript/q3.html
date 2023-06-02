@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Hello User, <span id="wish"></span></h2>
+    </div>
+</body>
+
+<script>
+
+var wish=document.getElementById('wish');
+    var date=new Date();
+    var hour=date.getHours();
+
+    if(hour>=5 && hour<=12)
+          wish.innerHTML=`Good Morning its ${hour} AM`;
+         
+    else if(hour>=12 && hour<=17)
+          wish.innerHTML=`Good Afternoon its ${hour} PM`;
+
+    else if (hour>=17 && hour<=21)
+          wish.innerHTML=`Good Evening its ${hour} PM`;
+    else 
+           wish.innerHTML=`Good Night its ${hour} PM`;
+</script>
+</html>
+

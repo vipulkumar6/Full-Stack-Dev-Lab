@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Telephone Number Parser</title>
+  
+</head>
+<body>
+
+  <label for="phoneNumberInput">Enter Telephone Number:</label>
+  <input type="text" id="phoneNumberInput">
+  <button onclick="parsePhoneNumber()">Display</button>
+  
+  <br><br>
+  
+  <label for="areaCodeField">Area Code:</label>
+  <input type="text" id="areaCodeField" disabled>
+  
+  <br><br>
+  
+  <label for="phoneNumberField">Phone Number:</label>
+  <input type="text" id="phoneNumberField" disabled>
+</body>
+<script>
+    function parsePhoneNumber() {
+     
+      var phoneNumber = document.getElementById("phoneNumberInput").value;
+      
+      var digitsOnly = phoneNumber.replace(/[(){}@]/g, '');
+      var areaCode = digitsOnly.substring(0, 3);
+      var phoneNumberDigits = digitsOnly.substring(3);
+    
+      document.getElementById("areaCodeField").value = areaCode;
+      document.getElementById("phoneNumberField").value = phoneNumberDigits;
+    }
+  </script>
+</html>
