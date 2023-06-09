@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Country Capital</title>
+    <style>
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+select{
+    padding: 10px;
+    cursor: pointer;
+}
+
+input[type="submit"]
+{
+    padding: 13px 16px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin: 9px;
+    cursor: pointer;
+}
+h1{
+    text-align: center;
+
+}
+    </style>
+  </head>
+  <body>
+    <h1>Check Capital name by select country name</h1>
+   <div class="wrapper">
+     <select name="" id="country">
+        <option value="0" >Select Country</option>
+      <option value="1">India</option>
+      <option value="2">China</option>
+      <option value="3">USA</option>
+      <option value="4">Canada</option>
+      <option value="5">Australia</option>
+    </select>
+    
+    <input type="submit" id="submitfun" value="Check Capital" />
+     Capital is : <span id="res">Please select option</span>
+   </div>
+  
+  </body>
+
+  <script>
+    const fun = document.getElementById("submitfun");
+    fun.addEventListener("click", submitEvent);
+
+    function submitEvent() {
+      var a = document.getElementById("country");
+
+      ans = a.value;
+      var capital = "";
+      console.log(ans);
+      console.log(typeof ans);
+      switch (ans) {
+        case "1":
+          document.getElementById("res").innerHTML = "New Delhi";
+          break;
+        case "2":
+          document.getElementById("res").innerHTML = "Beijing";
+          break;
+        case "3":
+          document.getElementById("res").innerHTML = "Washington, D.C.";
+          break;
+        case "4":
+          document.getElementById("res").innerHTML = "Ottawa";
+          break;
+        case "5":
+          document.getElementById("res").innerHTML = "Canberra";
+          break;
+      }
+    }
+  </script>
+</html>
